@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/splash_video" />
+
+    <!--Like Spotify image-->
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/loginLabel_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="144dp"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:bootstrapBrand="warning"
+        app:bootstrapText="오늘만 산다" />
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/loginLabel_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/loginLabel_top"
+        android:textSize="14sp"
+        app:bootstrapBrand="secondary"
+        app:bootstrapText="Extreme + Connect" />
+
+    <Button
+        android:id="@+id/testNavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Navigation"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/payTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="41dp"
+        android:text="pay Test"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/signLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/googleLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            app:bootstrapBrand="secondary"
+            app:bootstrapSize="md"
+            app:bootstrapText="{fa_google}  Google로 시작하기"
+            app:buttonMode="regular"
+            app:fontAwesomeIcon="fa_google"
+            app:roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:background="#c5b0ff"
+            android:text="회원가입"
+            android:textColor="@android:color/white"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="md"
+            app:buttonMode="regular"
+            app:roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:background="#add165"
+            android:text="로그인"
+            android:textColor="@android:color/white"
+            app:bootstrapBrand="regular"
+            app:bootstrapSize="md"
+            app:buttonMode="regular"
+            app:roundedCorners="true" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" @2018- . ejDash. All right reserved."
+            android:textAlignment="center"
+            android:textColor="#9effffff"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

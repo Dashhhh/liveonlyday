@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/broadcast_start" />
+
+            <ImageView
+                android:id="@+id/dialogKakaoBillingSuccessImage"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/gradient_dialog" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/dialogBroadcastText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/dialogKakaoBillingSuccessText"
+                android:layout_alignParentStart="true"
+                android:gravity="top"
+                android:paddingStart="12dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="방송 설정" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/dialogKakaoBillingSuccessText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:gravity="top"
+                android:paddingStart="18dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="방송의 세부 사항을 입력해 주세요"
+                app:layout_constraintBottom_toBottomOf="@+id/dialogKakaoBillingSuccessImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:materialIcon="md_exit_to_app"
+                tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/broadcastSetId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:hint="방송 제목"
+                android:maxLines="1"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/broadcastSetDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:hint="방송 설명"
+                android:maxLines="3"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/broadcastSetLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            app:bootstrapText="방송 위치 설정하기"
+            app:bootstrapBrand="success"
+            app:showOutline="false"
+            app:buttonMode="regular"
+            app:roundedCorners="true"
+            app:bootstrapSize="md"
+            tools:ignore="RtlSymmetry" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/broadcastSettingSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:bootstrapText="{fa_sign_in} 적용하기" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+
+</android.support.v7.widget.CardView>

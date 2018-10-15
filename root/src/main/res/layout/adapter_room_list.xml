@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/roomListRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/roomAdapCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <ImageView
+                    android:id="@+id/roomAdapThumbnail"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/roomAdapThumbnailGradient"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/gradient_light"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/roomAdapLocationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/roomAdapLocationAddress"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="8dp"
+                    android:textSize="14sp"
+                    app:bootstrapBrand="secondary"
+                    app:bootstrapText="{md_room} > locationName"
+                    app:fontAwesomeIcon="fa_map_pin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.032"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/roomAdapLocationAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="28dp"
+                    android:textSize="12sp"
+                    app:bootstrapBrand="info"
+                    app:bootstrapText="{md_room} > locationAddrss"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#d6ff0000"
+                    android:paddingBottom="2dp"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingTop="2dp"
+                    android:text="LIVE"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/roomAdapUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    app:bootstrapBrand="regular"
+                    app:bootstrapText="{md_room} > username"
+                    app:materialIcon="md_room"
+                    app:typicon="ty_times_outline" />
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/roomAdapRoomTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="8dp"
+                    android:textAlignment="textStart"
+                    android:textSize="14sp"
+                    app:bootstrapBrand="regular"
+                    app:bootstrapText="{md_room} > roomTitle"
+                    app:materialIcon="md_room" />
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/roomAdapRoomDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textAlignment="textStart"
+                    android:textSize="12sp"
+                    app:bootstrapBrand="regular"
+                    app:bootstrapText="{md_room} > roomDescription"
+                    app:materialIcon="md_room" />
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/roomAdapWatcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="12dp"
+                    android:textAlignment="textStart"
+                    android:textSize="13sp"
+                    app:bootstrapBrand="primary"
+                    app:bootstrapText="시청자 수 : 800"
+                    app:materialIcon="md_room" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/roomAdapTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="12sp"
+                        app:bootstrapBrand="regular"
+                        app:bootstrapText="{md_room} > time"
+                        app:materialIcon="md_room" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

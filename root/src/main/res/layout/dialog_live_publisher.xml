@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/broadcast_start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dialogKakaoBillingSuccessImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gradient_dialog"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/dialogBroadcastText1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="top"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="방송 준비"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/dialogKakaoBillingSuccessText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/dialogKakaoBillingSuccessText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="top"
+                android:paddingStart="16dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="방 제목 설정 후 방송 시작 버튼을 눌러주세요"
+                app:layout_constraintBottom_toBottomOf="@+id/dialogKakaoBillingSuccessImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:materialIcon="md_exit_to_app"
+                tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/cardview_light_background">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="방송 제목"
+                android:paddingStart="16dp"
+                tools:ignore="RtlSymmetry" />
+        </android.support.design.widget.TextInputLayout>
+        <!--<com.beardedhen.androidbootstrap.BootstrapEditText-->
+        <!--android:id="@+id/liveDescriptionBeforeEnter"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:hint="@string/roomName"-->
+        <!--android:maxLines="1"-->
+        <!--android:paddingBottom="16dp"-->
+        <!--android:paddingTop="16dp"-->
+        <!--android:textSize="20sp"-->
+        <!--app:bootstrapBrand="info"-->
+        <!--app:bootstrapSize="lg"-->
+        <!--app:materialIcon="md_exit_to_app"-->
+        <!--app:roundedCorners="true" />-->
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/enterLive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:bootstrapText="{fa_sign_in} 방송 시작" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

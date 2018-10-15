@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/friendsAdapRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/friendsListCallListCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:visibility="visible"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="md"
+            app:bootstrapText="{fa-star}"
+            app:buttonMode="checkbox"
+            app:roundedCorners="true"
+            app:showOutline="true"
+            app:typicon="ty_phone_outline" />
+        <!-- CheckBox는 통화 인원 선택시에만 visible, 그 외에는 GONE -->
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/friendsThumbnail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_supervisor_account_black_24dp"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="0.3dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#8BC34A"
+            app:civ_shadow_radius="5" />
+
+        <!-- reference - com.mikhaellopez.circularimageview.CircularImageView
+        app:civ_border (boolean) -> default true
+        app:civ_border_color (color) -> default WHITE
+        app:civ_border_width (dimension) -> default 4dp
+        app:civ_background_color (color) -> default WHITE
+        app:civ_shadow (boolean) -> default false
+        app:civ_shadow_color (color) -> default BLACK
+        app:civ_shadow_radius (float) -> default 8.0f
+        app:civ_shadow_gravity (center, top, bottom, start or end) -> default bottom
+        -->
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/friendsListMyFriendsId"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="123123"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/friendsListRequestWaitLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:visibility="gone">
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/friendsListRequestWait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="md"
+                app:bootstrapText="요청 보냄"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/friendsListRequestAddingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/friendsListRequestAddingAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="md"
+                app:bootstrapText="수락"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/friendsListRequestAddingDeny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:bootstrapBrand="danger"
+                app:bootstrapSize="md"
+                app:bootstrapText="거절"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#d4c4c4" />
+
+</LinearLayout>

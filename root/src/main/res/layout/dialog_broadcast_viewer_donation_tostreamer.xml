@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gift" />
+
+            <ImageView
+                android:id="@+id/dialogGiftImage"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/gradient_dialog" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/dialogGiftText"
+                android:layout_alignParentStart="true"
+                android:gravity="top"
+                android:paddingStart="18dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="후원하기" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/dialogGiftText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:gravity="top"
+                android:paddingStart="24dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="스트리머에게 후원 할 포인트를 입력해 주세요"
+                app:layout_constraintBottom_toBottomOf="@+id/dialogGiftImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:materialIcon="md_exit_to_app"
+                tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="현재 내 포인트"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/dialogGiftMyPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#60000000" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="후원 후 포인트"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/dialogGiftMyPointFuture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:textColor="#2a00ff"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/dialogGiftPointAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:hint="후원 할 포인트를 입력해 주세요"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/dialogGiftMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:hint="방송에 하고 싶은 말을 적어주세요 (50자 이내)"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/dialogGiftConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="lg"
+            app:bootstrapText="{fa_gift} 후원 하기"
+            app:fontAwesomeIcon="fa_gift" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

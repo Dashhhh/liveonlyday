@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "computician.janusclient"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.beardedhen:androidbootstrap:2.3.2'
+
+    //이하 WebRTC Contents 관련 Library
+
+    implementation project(':janusclientapi')
+    implementation 'com.android.support:support-v4:27.1.1'
+
+    // Asyncronus HTTP > using janusAPI
+    implementation 'com.koushikdutta.async:androidasync:2.2.1'
+
+    // Asyncronus HTTP > using janusAPI
+    implementation 'com.mcxiaoke.volley:library:1.0.15@aar'
+
+    // WebRTC PeerConnection Library
+    implementation 'io.pristine:libjingle:9127@aar'
+
+    // Android Permission 가독성 좋음
+    implementation 'gun0912.ted:tedpermission:2.1.0'
+
+    // Asyncronus HTTP > using RestFul Contents
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    // 직관적인 Parsing
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // JAVA를 이용해 Linux SSH 연결 > Command 날릴 수 있음
+    implementation 'com.jcraft:jsch:0.1.54'
+
+    // Butter Knife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+}

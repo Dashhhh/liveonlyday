@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    productFlavors {
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.mcxiaoke.volley:library:1.0.15@aar'
+    implementation 'com.koushikdutta.async:androidasync:2.2.1'
+    implementation 'io.pristine:libjingle:9127@aar'
+    //    implementation 'org.webrtc:google-webrtc:1.0.+'
+    //    implementation 'io.pristine:libjingle:11139@aar'
+    //    implementation 'com.mcxiaoke.volley:library:1.0.15@aar'
+//    implementation 'com.koushikdutta.async:androidasync:2.+'
+}

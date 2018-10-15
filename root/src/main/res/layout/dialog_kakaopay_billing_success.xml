@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dialog_6" />
+
+            <ImageView
+                android:id="@+id/dialogKakaoBillingSuccessImage"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/gradient_dialog" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/dialogKakaoBillingSuccessText"
+                android:layout_alignParentStart="true"
+                android:gravity="top"
+                android:paddingStart="18dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="결제 성공" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/dialogKakaoBillingSuccessText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:gravity="top"
+                android:paddingStart="24dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="포인트가 정상적으로 충전 되었습니다."
+                app:layout_constraintBottom_toBottomOf="@+id/dialogKakaoBillingSuccessImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:materialIcon="md_exit_to_app"
+                tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+        </RelativeLayout>
+
+        
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/dialogKakaoBillingSuccessConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="md"
+            app:typicon="ty_thumbs_ok"
+            app:bootstrapText="{ty_thumbs_ok} 확인" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

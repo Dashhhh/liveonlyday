@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/vGLSurfaceViewCall"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vGLSurfaceViewCall"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/viewerWatcher"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            app:bootstrapBrand="secondary"
+            app:bootstrapText="현재 시청자 : 0" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/viewerSendPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:padding="4dp"
+            android:textSize="30sp"
+            app:bootstrapBrand="secondary"
+            app:bootstrapText="{fa_gift}"
+            app:fontAwesomeIcon="fa_gift" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/viewerLiveAnimation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            app:bootstrapBrand="warning"
+            app:bootstrapText="방송 중" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_receive_donation"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/chatRoomRV_Viewer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatRoomRV_Viewer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="350dp"
+        android:paddingStart="8dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/chatRoomSendMessageRoot_Viewer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/chatRoomSendMessageRoot_Viewer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@drawable/gradient"
+        android:orientation="horizontal"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoomRV_Viewer">
+
+        <EditText
+            android:id="@+id/chatRoomSendMessageEditText_Viewer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:hint="메세지를 작성해주세요"
+            android:textColor="#ffffff"
+            android:textColorHint="#efdfdf" />
+
+        <Button
+            android:id="@+id/chatRoomSendMessageSendBtn_Viewer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="전송" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

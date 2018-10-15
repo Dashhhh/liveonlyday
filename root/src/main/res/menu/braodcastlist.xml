@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_live"
+        android:icon="@drawable/ic_videocam_black_24dp"
+        android:title="@string/live" />
+
+    <item
+        android:id="@+id/action_vod"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/vod" />
+
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="@string/setting" />
+
+</menu>

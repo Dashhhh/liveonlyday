@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <ImageView
+                android:id="@+id/signupImage"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dialog_2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:src="@drawable/gradient_dialog" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/signupTopSubText"
+                android:layout_alignParentStart="true"
+                android:gravity="top"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:textAlignment="textStart"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="회원가입"
+                tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/signupTopSubText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="13dp"
+                android:gravity="top"
+                android:paddingStart="16dp"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                app:bootstrapBrand="secondary"
+                app:bootstrapText="회원가입을 위해 아래 내용을 채워주세요"
+                app:materialIcon="md_exit_to_app"
+                tools:ignore="RtlCompat,RtlSymmetry" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signupEmailWrapper"
+                android:hint="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/signupEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#b5000000"
+                    android:textSize="12sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signupIdWrapper"
+                android:hint="아이디"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/signupId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailSubject"
+                    android:textColorHint="#b5000000"
+                    android:textSize="12sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/signupPasswordWrapper"
+                    android:layout_width="match_parent"
+                    android:hint="비밀번호"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/signupPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColorHint="#b5000000"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:hint="비밀번호 확인"
+                    android:id="@+id/signupPasswordCheckWrapper"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/signupPasswordCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColorHint="#b5000000"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/signupPhoneNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/signupPhoneNumberWrapper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="인증번호 받을 휴대폰 번호"
+                    android:layout_weight="100">
+
+                    <EditText
+                        android:id="@+id/signupPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPhonetic"
+                        android:textColorHint="#b5000000"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/signupRequestAuth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    app:bootstrapBrand="primary"
+                    app:bootstrapSize="md"
+                    app:bootstrapText="요청"
+                    app:buttonMode="regular"
+                    app:roundedCorners="true"
+                    app:showOutline="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/signupAuthNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/signupAuthNumberWrapper"
+                    android:layout_height="wrap_content"
+                    android:hint="인증번호 확인"
+                    android:layout_weight="100">
+
+                    <EditText
+                        android:id="@+id/signupAuthNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberSigned"
+                        android:textColorHint="#b5000000"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/signupAuthSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    app:bootstrapBrand="primary"
+                    app:bootstrapSize="md"
+                    app:bootstrapText="제출"
+                    app:buttonMode="regular"
+                    app:roundedCorners="true"
+                    app:showOutline="true" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/signup_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:bootstrapText="{fa_sign_in} 완료"
+                app:buttonMode="regular" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView><!--<?xml version="1.0" encoding="utf-8"?>-->
+
+    <!--&lt;!&ndash;--><!--~ Copyright (c) 2018--><!--&ndash;&gt;-->
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:background="#ffffff"--><!--android:orientation="vertical">-->
+
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:gravity="center"--><!--android:orientation="horizontal"--><!--android:padding="16dp">-->
+
+    <!--<com.beardedhen.androidbootstrap.AwesomeTextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="16dp"--><!--android:textSize="20sp"--><!--app:bootstrapBrand="regular"--><!--app:bootstrapText="{fa_at}"--><!--app:fontAwesomeIcon="fa_at"-->
+
+    <!--/>-->
+
+    <!--<com.beardedhen.androidbootstrap.BootstrapEditText--><!--android:id="@+id/signup_email"--><!--android:layout_width="250dp"--><!--android:layout_height="wrap_content"--><!--android:hint="@string/e_mail"--><!--android:textColor="#000000"--><!--app:bootstrapBrand="regular"--><!--app:bootstrapSize="lg" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:gravity="center"--><!--android:orientation="horizontal"--><!--android:padding="16dp">-->
+
+    <!--<com.beardedhen.androidbootstrap.AwesomeTextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="16dp"--><!--android:textSize="20sp"--><!--app:bootstrapBrand="regular"--><!--app:bootstrapText="{fa_key}"--><!--app:fontAwesomeIcon="fa_key"-->
+
+    <!--/>-->
+
+    <!--<com.beardedhen.androidbootstrap.BootstrapEditText--><!--android:id="@+id/signup_password"--><!--android:layout_width="250dp"--><!--android:layout_height="wrap_content"--><!--android:hint="@string/password"--><!--android:inputType="textPassword"--><!--android:textColor="#000000"--><!--app:bootstrapBrand="regular"--><!--app:bootstrapSize="lg" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:gravity="center"--><!--android:orientation="horizontal"--><!--android:padding="16dp">-->
+
+    <!--<com.beardedhen.androidbootstrap.AwesomeTextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginEnd="16dp"--><!--android:textSize="20sp"--><!--app:bootstrapBrand="regular"--><!--app:bootstrapText="{md_lock_open}"--><!--app:fontAwesomeIcon="fa_key"--><!--app:materialIcon="md_lock_open"-->
+
+    <!--/>-->
+
+    <!--<com.beardedhen.androidbootstrap.BootstrapEditText--><!--android:id="@+id/signup_password_re"--><!--android:layout_width="250dp"--><!--android:layout_height="wrap_content"--><!--android:inputType="textPassword"--><!--android:textColor="#000000"--><!--app:bootstrapBrand="regular"--><!--app:bootstrapSize="lg" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:orientation="horizontal">-->
+
+    <!--<com.beardedhen.androidbootstrap.BootstrapButton--><!--android:id="@+id/signup_complete"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--app:bootstrapBrand="primary"--><!--app:bootstrapSize="lg"--><!--app:bootstrapText="{fa_sign_in} 회원가입" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->

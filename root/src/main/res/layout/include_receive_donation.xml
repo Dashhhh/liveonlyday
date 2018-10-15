@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/broadcastDonationLottie"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#00000000"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="smiley_stack.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/broadcastDonationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/broadcastDonationMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:textSize="16sp"
+        />
+
+</LinearLayout>
