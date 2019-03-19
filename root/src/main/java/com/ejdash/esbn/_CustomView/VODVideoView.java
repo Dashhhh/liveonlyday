@@ -16,7 +16,6 @@ public class VODVideoView extends VideoView
 
     public VODVideoView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        // TODO Auto-generated constructor stub
     }
 
     @Override

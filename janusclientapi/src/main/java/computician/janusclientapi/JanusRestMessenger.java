@@ -3,23 +3,23 @@ package computician.janusclientapi;
 import android.net.Uri;
 import android.util.Log;
 
-import java.math.BigInteger;
-import com.koushikdutta.async.*;
-import com.koushikdutta.async.callback.CompletedCallback;
-import com.koushikdutta.async.future.Future;
-import com.koushikdutta.async.http.*;
-import com.koushikdutta.async.http.body.*;
+import com.koushikdutta.async.http.AsyncHttpClient;
+import com.koushikdutta.async.http.AsyncHttpGet;
+import com.koushikdutta.async.http.AsyncHttpPost;
+import com.koushikdutta.async.http.AsyncHttpRequest;
+import com.koushikdutta.async.http.AsyncHttpResponse;
+import com.koushikdutta.async.http.body.JSONObjectBody;
 import com.koushikdutta.async.http.callback.HttpConnectCallback;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.math.BigInteger;
 
 
 /**
  * Created by ben.trent on 5/7/2015.
  */
 
-//TODO big todo...it would be good to use androidasync as we already utilize that for the websocket endpoint
 public class JanusRestMessenger implements IJanusMessenger {
 
     private final IJanusMessageObserver handler;
@@ -71,18 +71,15 @@ public class JanusRestMessenger implements IJanusMessenger {
              }
          });
 
-        //todo
     }
 
     @Override
     public void disconnect() {
 
-        //todo
     }
 
     @Override
     public void sendMessage(String message) {
-        //todo
         Log.d("message", "Sent: \n\t" + message);
         if(resturi.isEmpty())
             resturi = uri;
@@ -115,7 +112,6 @@ public class JanusRestMessenger implements IJanusMessenger {
 
     @Override
     public void sendMessage(String message, BigInteger session_id) {
-        //todo
         this.session_id = session_id;
         resturi = "";
         resturi = uri +"/"+ session_id.toString();
@@ -124,7 +120,6 @@ public class JanusRestMessenger implements IJanusMessenger {
 
     @Override
     public void sendMessage(String message, BigInteger session_id, BigInteger handle_id) {
-        //todo
         this.session_id = session_id;
         this.handle_id = handle_id;
         resturi = "";
@@ -132,7 +127,6 @@ public class JanusRestMessenger implements IJanusMessenger {
         sendMessage(message);
     }
 
-    //todo
     private void handleNewMessage(String message) {
 
     }

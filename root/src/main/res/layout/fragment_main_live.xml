@@ -37,7 +37,6 @@
     <!--android:layout_height="match_parent"-->
     <!--tools:context="._ej.fragment.FragmentMainLive">-->
 
-    <!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
     <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->

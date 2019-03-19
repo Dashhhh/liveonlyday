@@ -208,8 +208,6 @@ public class JanusServer implements Runnable, IJanusMessageObserver, IJanusSessi
         }
     }
 
-    //TODO not sure if the send message functions should be Asynchronous
-
     public void sendMessage(TransactionType type, BigInteger handle, IPluginHandleSendMessageCallbacks callbacks, JanusSupportedPluginPackages plugin) {
         JSONObject msg = callbacks.getMessage();
         if (msg != null) {
@@ -353,7 +351,6 @@ public class JanusServer implements Runnable, IJanusMessageObserver, IJanusSessi
             keep_alive = new Thread(this, "KeepAlive");
             keep_alive.start();
             connected = true;
-            //TODO do we want to keep track of multiple sessions and servers?
             gatewayObserver.onSuccess();
         } catch (JSONException ex) {
             gatewayObserver.onCallbackError(ex.getMessage());

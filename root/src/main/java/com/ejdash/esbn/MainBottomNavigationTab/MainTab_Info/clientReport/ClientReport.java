@@ -411,7 +411,6 @@ public class ClientReport extends AppCompatActivity {
 
         @Override
         public void onValueDeselected() {
-            // TODO Auto-generated method stub
 
         }
 
@@ -426,7 +425,6 @@ public class ClientReport extends AppCompatActivity {
 
         @Override
         public void onValueDeselected() {
-            // TODO Auto-generated method stub
 
         }
 

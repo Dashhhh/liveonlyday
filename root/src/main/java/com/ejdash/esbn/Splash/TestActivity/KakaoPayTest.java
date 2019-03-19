@@ -102,15 +102,13 @@ public class KakaoPayTest extends AppCompatActivity {
 
         String url = "http://13.124.128.18/esbn/kakao/pay/imp.php?";
 
-        String body = "amount="    + amount + "&" +
-                "buyer_email="     + buyer_email + "&" +
-                "buyer_name="      + buyer_name + "&" +
-                "buyer_tel="       + buyer_tel + "&" +
-                "buyer_addr="      + buyer_addr + "&" +
-                "buyer_postcode="  + buyer_postcode + "&" +
-                "m_redirect_url="  + redirectUrl;
-
-
+        String body = "amount=" + amount + "&" +
+                "buyer_email=" + buyer_email + "&" +
+                "buyer_name=" + buyer_name + "&" +
+                "buyer_tel=" + buyer_tel + "&" +
+                "buyer_addr=" + buyer_addr + "&" +
+                "buyer_postcode=" + buyer_postcode + "&" +
+                "m_redirect_url=" + redirectUrl;
 
 
         payWeb.setWebViewClient(new WebViewClient() {
@@ -160,7 +158,6 @@ public class KakaoPayTest extends AppCompatActivity {
             }
 
 
-
             @Override
             public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
                 Log.i(TAG, "setWebChromeClient > onConsoleMessage > consoleMessage.message() > " + consoleMessage.message());
@@ -171,13 +168,12 @@ public class KakaoPayTest extends AppCompatActivity {
             public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
 
                 new AlertDialog.Builder(KakaoPayTest.this).setTitle("Alert").setMessage(message)
-                        .setPositiveButton(android.R.string.ok,new AlertDialog.OnClickListener(){
-                            public void onClick(DialogInterface dialog, int which){
+                        .setPositiveButton(android.R.string.ok, new AlertDialog.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
                                 result.confirm();
 
-                                // TODO 결제 완료 후 프로필 화면으로 돌아가기기
-
-                            }                        }).setCancelable(false).create().show();
+                            }
+                        }).setCancelable(false).create().show();
 
                 Log.i(TAG, "setWebChromeClient > onJsAlert > 발생");
 

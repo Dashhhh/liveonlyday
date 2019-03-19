@@ -11,7 +11,6 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -165,10 +164,6 @@ public class FragmentMainVOD extends Fragment {
                     String result = response.body().string();
                     Log.i("flowCheck", "onResponse: response VOD List > " + result);
 
-
-                    // TODO : response 값 확인하고 리사이클러뷰에 넣기
-
-
                     JsonParser parser = null;
                     try {
                         parser = new JsonParser();
@@ -215,7 +210,6 @@ public class FragmentMainVOD extends Fragment {
     }
 
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
@@ -252,7 +246,6 @@ public class FragmentMainVOD extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

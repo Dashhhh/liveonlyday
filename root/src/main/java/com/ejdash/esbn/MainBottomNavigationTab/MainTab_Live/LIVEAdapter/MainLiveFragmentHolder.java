@@ -18,7 +18,7 @@ public class MainLiveFragmentHolder extends RecyclerView.ViewHolder {
     com.beardedhen.androidbootstrap.AwesomeTextView roomAdapUserName, roomAdapTime, roomAdapRoomTitle, roomAdapRoomDescription, roomAdapLocationName, roomAdapLocationAddress, roomAdapWatcher;
     LinearLayout roomListRoot;
     CardView roomAdapCard;
-    ImageView roomAdapThumbnail;        // TODO server.js 에서 썸네일 만들고 경로 받아와서 글라이드로 뿌리기
+    ImageView roomAdapThumbnail;
 
     MainLiveFragmentHolder(View itemView) {
         super(itemView);

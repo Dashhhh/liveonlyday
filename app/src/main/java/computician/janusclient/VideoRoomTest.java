@@ -27,7 +27,7 @@ import computician.janusclientapi.PluginHandleSendMessageCallbacks;
 import computician.janusclientapi.PluginHandleWebRTCCallbacks;
 
 
-//TODO create message classes unique to this plugin
+
 /**
  * Created by ben.trent on 7/24/2015.
  */
@@ -249,13 +249,13 @@ public class VideoRoomTest {
             }
         }
 
-        private void newRemoteFeed(BigInteger id) { //todo attach the plugin as a listener
+        private void newRemoteFeed(BigInteger id) {
             VideoRenderer.Callbacks myrenderer;
             if(!remoteRenderers.containsKey(id))
             {
                 if(availableRemoteRenderers.isEmpty())
                 {
-                    //TODO no more space
+                    //no more space
                     return;
                 }
                 remoteRenderers.put(id, availableRemoteRenderers.pop());
@@ -300,7 +300,7 @@ public class VideoRoomTest {
                     } else if(msg.has("unpublished")) {
 
                     } else {
-                        //todo error
+                        // error
                     }
                 }
                 if(jsepLocal != null) {

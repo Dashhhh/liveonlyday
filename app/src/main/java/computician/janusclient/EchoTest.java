@@ -26,7 +26,6 @@ import computician.janusclientapi.PluginHandleSendMessageCallbacks;
  * Created by ben.trent on 7/24/2015.
  */
 
-//TODO create message classes unique to this plugin
 
 public class EchoTest {
 

@@ -7,8 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.TextView;
 
 import com.ejdash.esbn.Point.Billing.KakaoPayBilling;
@@ -184,7 +182,7 @@ public class SelectPointAmount extends AppCompatActivity {
      */
     private void selectPayingIcon() {
 
-        // TODO 가격 getText() > Intent KakaoPay Activity
+        // 가격 getText() > Intent KakaoPay Activity
 
 
         if (payCustomAmount.getText().toString().trim().length() != 0) {

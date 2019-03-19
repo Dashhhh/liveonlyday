@@ -18,7 +18,7 @@ public class ChatRoomHolder_Presenter extends RecyclerView.ViewHolder {
     com.beardedhen.androidbootstrap.AwesomeTextView chatRoomAdapUserName, chatRoomText;
     LinearLayout chatRoomRoot;
     CardView chatRoomAdapCard;
-    ImageView thumbnailPath;        // TODO server.js 에서 썸네일 만들고 경로 받아와서 글라이드로 뿌리기
+    ImageView thumbnailPath;
 
     public ChatRoomHolder_Presenter(View itemView) {
         super(itemView);

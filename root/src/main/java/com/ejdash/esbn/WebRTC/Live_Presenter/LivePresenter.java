@@ -170,7 +170,7 @@ public class LivePresenter extends AppCompatActivity
     private String sessionWatcherCount; // 시청자 수 받아 오는 변수
     // Android View Update 위한 UiThread
     private Runnable showUpdate = new Runnable() {
-        // TODO 서버로 부터 받은 메세지!!!!!!!!
+        // 버로 부터 받은 메세지
         public void run() {
 //            String receive = "Coming word : " + data;
             Log.i("채팅응답", "data > " + data);
@@ -313,7 +313,6 @@ public class LivePresenter extends AppCompatActivity
                 int editTextNullCheckId = broadcastSetId.getText().toString().trim().length();
                 int editTextNullCheckDescription = broadcastSetDescription.getText().toString().trim().length();
 
-                // TODO broadcastSetDescription.getText().toString().trim().length() 로 int값 확인 후 텍스트 Null 체크
                 if (editTextNullCheckDescription == 0 || editTextNullCheckId == 0) {
                     Toast.makeText(LivePresenter.this, "방송 제목 및 설명은 공란일 수 없습니다", Toast.LENGTH_SHORT).show();
                 } else {
@@ -436,7 +435,7 @@ public class LivePresenter extends AppCompatActivity
 
             } else if (resultCode == PlaceAutocomplete.RESULT_ERROR) {
                 Status status = PlaceAutocomplete.getStatus(this, data);
-                // TODO: Handle the error.
+                // 에러 핸들링 필요 할 경우 이 부분 수정
                 Log.i("PLACE확인", status.getStatusMessage());
             } else if (resultCode == RESULT_CANCELED) {
                 // The user canceled the operation.
@@ -503,7 +502,7 @@ public class LivePresenter extends AppCompatActivity
         }
 
         Log.i(TAG, "chatInit > chatInitMessage > \n" + chatInitMessage);
-        chatHandler(chatInitMessage);   // TODO chatInitMessage 변수 더 이상 필요 없음 > 정보 서버에서 받아옴, 필요한건 시청자쪽임
+        chatHandler(chatInitMessage);
 
     }       // chatInit() end
 
@@ -1113,9 +1112,6 @@ public class LivePresenter extends AppCompatActivity
             VideoCapturer videoCapturer = null;
             Log.i("카메라확인", "onSignalConnected > peerConnectionParameters.videoCallEnabled > " + peerConnectionParameters.videoCallEnabled);
             if (peerConnectionParameters.videoCallEnabled) {
-
-                // TODO GoPro 붙일 때 고려해야 하는 부분, Flag로 진입 경로 고려할 것 > Check ; 방송 중 카메라 바꿀 수 있는지?
-                // peerConnectionClient.switchCamera(); 확인 할 것
                 videoCapturer = createVideoCapturer();
             }
 

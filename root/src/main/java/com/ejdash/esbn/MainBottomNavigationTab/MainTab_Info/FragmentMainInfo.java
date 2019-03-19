@@ -95,9 +95,6 @@ public class FragmentMainInfo extends Fragment {
         clientPayForPoint = view.findViewById(R.id.clientPayForPoint);
         userInfoPointLoading = view.findViewById(R.id.userInfoPointLoading);
         userInfoPointLoadingLayout = view.findViewById(R.id.userInfoPointLoadingLayout);
-        // TODO @var userInfoPoint DB 조회 후 setText()
-        // TODO userInfoPoint 관련 (포인트 관련) DB Table 만들기
-
 
         getUserInfo();
         Animation animation = AnimationUtils.loadAnimation(context, R.anim.rotate); // 로딩 화살표 360도 무한 반복

@@ -5,11 +5,21 @@ import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.webrtc.*;
-import org.webrtc.videoengine.VideoCaptureAndroid;
+import org.webrtc.AudioSource;
+import org.webrtc.AudioTrack;
+import org.webrtc.DataChannel;
+import org.webrtc.IceCandidate;
+import org.webrtc.MediaConstraints;
+import org.webrtc.MediaStream;
+import org.webrtc.PeerConnection;
+import org.webrtc.PeerConnectionFactory;
+import org.webrtc.SdpObserver;
+import org.webrtc.SessionDescription;
+import org.webrtc.VideoCapturerAndroid;
+import org.webrtc.VideoSource;
+import org.webrtc.VideoTrack;
 
 import java.math.BigInteger;
-import java.util.concurrent.locks.AbstractOwnableSynchronizer;
 
 /**
  * Created by ben.trent on 6/25/2015.
@@ -47,7 +57,6 @@ public class JanusPluginHandle {
         @Override
         public void onSetFailure(String error) {
             Log.d("JANUSCLIENT", "On set Failure");
-            //todo JS api does not account for this
             webRtcCallbacks.onCallbackError(error);
         }
 
@@ -215,7 +224,6 @@ public class JanusPluginHandle {
             JSONObject obj = new JSONObject(msg);
             callbacks.onMessage(obj, null);
         } catch (JSONException ex) {
-            //TODO do we want to notify the GatewayHandler?
         }
     }
 

@@ -45,7 +45,6 @@ import okhttp3.Response;
  * > 진입 경로 - 로그인 > MainActivity 내 BottomNavigation 중 'Live'
  * RecyclerView (방송목록) 하나와 방송하기 버튼 하나가 초기 구성
  * <p>
- * TODO : 예제용 방송 리스트 올리기
  */
 
 public class FragmentMainLive extends Fragment {
@@ -125,11 +124,7 @@ public class FragmentMainLive extends Fragment {
             roomListAdapter.notifyDataSetChanged();
         });
 
-        /*
-        okHttp 통해 방 목록 불러오는 메서드
-        TODO : postDelay를 통해 Adapter 갱신 할 것
-         */
-
+        // okHttp 통해 방 목록 불러오는 메서드
         getRoomList();
 
         // onDetach에서 removeCallbackAndMessage 할 것
@@ -364,7 +359,6 @@ public class FragmentMainLive extends Fragment {
 
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
 
     public void onButtonPressed(Uri uri) {
         Log.i("프래그확인", "onButtonPressed()");
@@ -417,7 +411,6 @@ public class FragmentMainLive extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 

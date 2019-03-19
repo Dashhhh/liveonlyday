@@ -137,8 +137,7 @@ public class LiveViewer extends AppCompatActivity
     // Android View Update 위한 UiThread
     private Runnable showUpdate = new Runnable() {
 
-        // TODO 서버로 부터 받은 메세지!!!!!!!!
-
+        // 서버로 부터 받은 메세지
         public void run() {
 //            String receive = "Coming word : " + data;
 
@@ -227,7 +226,7 @@ public class LiveViewer extends AppCompatActivity
 
 
         /**
-         * 아래 변수는 채팅방에 처음 들어갈 때 들고 갈 내용임
+         * 아래 변수는 채팅방에 처음 들어갈 때 들고 갈 내용
          */
         userInfo = new HashMap<>();
         Intent getIntent = getIntent();
@@ -260,7 +259,7 @@ public class LiveViewer extends AppCompatActivity
         }
 
         Log.i("채팅초기확인", "chatInit > chatInitMessage > \n" + chatInitMessage);
-        chatHandler(chatInitMessage);   // TODO chatInitMessage 변수 더 이상 필요 없음 > 정보 서버에서 받아옴, 필요한건 시청자쪽임
+        chatHandler(chatInitMessage);   // chatInitMessage 변수 더 이상 필요 없음 > 정보 서버에서 받아옴, 필요한건 시청자쪽임
 
     }
 
@@ -371,7 +370,6 @@ public class LiveViewer extends AppCompatActivity
          */
         chatRoomSendMessageSendBtn.setOnClickListener(v -> {
             try {
-                // TODO EditText
 //                    final String return_msg = sendMsgEditText.getText().toString();
                 final String return_msg = chatRoomSendMessageEditText.getText().toString();
                 if (!TextUtils.isEmpty(return_msg)) {
@@ -548,10 +546,6 @@ public class LiveViewer extends AppCompatActivity
 //            runOnUiThread(this::lottieAnimation);
 
             dialog.dismiss();
-
-            // TODO point 보내기
-            // TODO Streamer lottie
-            // TODO server.js ws.on > ws.send (create function)
 
         });
 
