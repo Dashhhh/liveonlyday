@@ -1,1 +1,1 @@
-include ':root', ':faceCall','janusclientapi'
+include ':app', ':faceCall','janusclientapi'
