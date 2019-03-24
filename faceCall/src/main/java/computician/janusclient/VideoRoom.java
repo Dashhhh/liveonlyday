@@ -31,7 +31,7 @@ import computician.janusclientapi.PluginHandleWebRTCCallbacks;
 /**
  * Created by ben.trent on 7/24/2015.
  */
-public class VideoRoomTest {
+public class VideoRoom {
     public static final String REQUEST = "request";
     public static final String MESSAGE = "message";
     public static final String PUBLISHERS = "publishers";
@@ -45,7 +45,7 @@ public class VideoRoomTest {
     final private String user_name = "android";
     final private int roomid = 1234;
 
-    public VideoRoomTest(VideoRenderer.Callbacks localRender, List<VideoRenderer.Callbacks> remoteRenders) {
+    public VideoRoom(VideoRenderer.Callbacks localRender, List<VideoRenderer.Callbacks> remoteRenders) {
         this.localRender = localRender;
         for(int i = 0; i < remoteRenders.size(); i++)
         {

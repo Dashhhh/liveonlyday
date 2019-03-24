@@ -1,7 +1,6 @@
 package computician.janusclient;
 
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.opengl.EGLContext;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
@@ -29,8 +28,8 @@ public class JanusActivity extends Activity {
     private VideoRenderer.Callbacks remoteRenderer4;
     private VideoRenderer.Callbacks remoteRenderer5;
 //    private VideoRenderer.Callbacks remoteRender;
-    private EchoTest echoTest;
-    private VideoRoomTest videoRoomTest;
+    private Echo echo;
+    private VideoRoom videoRoom;
 
     /**
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after
@@ -71,9 +70,9 @@ public class JanusActivity extends Activity {
                 remoteRender.add(remoteRenderer5);
 
                 EGLContext con = VideoRendererGui.getEGLContext();
-                videoRoomTest = new VideoRoomTest(localRender, remoteRender);
-                videoRoomTest.initializeMediaContext(JanusActivity.this, true, true, true, con);
-                videoRoomTest.Start();
+                videoRoom = new VideoRoom(localRender, remoteRender);
+                videoRoom.initializeMediaContext(JanusActivity.this, true, true, true, con);
+                videoRoom.Start();
 
             } catch (Exception ex) {
                 Log.e("computician.janusclient", ex.getMessage());

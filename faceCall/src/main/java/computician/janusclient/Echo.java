@@ -27,7 +27,7 @@ import computician.janusclientapi.PluginHandleSendMessageCallbacks;
  */
 
 
-public class EchoTest {
+public class Echo {
 
     private final String JANUS_URI = "ws://192.168.1.197:8188";
     private JanusPluginHandle handle = null;
@@ -75,7 +75,7 @@ public class EchoTest {
 
         @Override
         public void success(JanusPluginHandle pluginHandle) {
-            EchoTest.this.handle = pluginHandle;
+            Echo.this.handle = pluginHandle;
 
                 JSONObject msg = new JSONObject();
                 JSONObject obj = new JSONObject();
@@ -210,7 +210,7 @@ public class EchoTest {
 
     }
 
-    public EchoTest(VideoRenderer.Callbacks localRender, VideoRenderer.Callbacks remoteRender) {
+    public Echo(VideoRenderer.Callbacks localRender, VideoRenderer.Callbacks remoteRender) {
         this.localRender = localRender;
         this.remoteRender = remoteRender;
         janusServer = new JanusServer(new JanusGlobalCallbacks());

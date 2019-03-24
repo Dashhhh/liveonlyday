@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/faceCall/faceCall.iml" filepath="$PROJECT_DIR$/faceCall/faceCall.iml" />
       <module fileurl="file://$PROJECT_DIR$/janusclientapi/janusclientapi.iml" filepath="$PROJECT_DIR$/janusclientapi/janusclientapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/liveonlyday.iml" filepath="$PROJECT_DIR$/liveonlyday.iml" />
       <module fileurl="file://$PROJECT_DIR$/root/root.iml" filepath="$PROJECT_DIR$/root/root.iml" />
